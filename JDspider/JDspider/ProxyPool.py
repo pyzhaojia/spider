@@ -4,7 +4,7 @@ import json
 
 class Proxy(object):
     def __init__(self):
-        self.url = 'http://127.0.0.1:8000/?types=0&protocol=1&count=10&country=国内'
+        self.url = 'http://127.0.0.1:8000/?types=0&protocol=0&count=10&country=国内'
 
     def get_ip(self):
         r = requests.get(self.url)

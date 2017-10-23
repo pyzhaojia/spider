@@ -67,8 +67,8 @@ DOWNLOAD_DELAY = 3
 DOWNLOADER_MIDDLEWARES = {
    # 'JDspider.middlewares.MyCustomDownloaderMiddleware': 543,
     'JDspider.middlewares.RandomUser_agent': 542,
-    'JDspider.middlewares.RandomProxy': 543,
-    'scrapy.downloadermiddlewares.retry.RetryMiddleware':541
+    # 'JDspider.middlewares.RandomProxy': 543,
+    'scrapy.downloadermiddlewares.retry.RetryMiddleware': 541
 
 }
 RETRY_ENABLED = True

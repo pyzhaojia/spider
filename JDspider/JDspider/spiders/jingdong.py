@@ -38,7 +38,7 @@ class JingdongSpider(scrapy.Spider):
         id_list = []
         for good in good_list:
             i = {}
-            good_url = 'https://' + good.xpath('./@href').extract_first()
+            good_url = 'https:' + good.xpath('./@href').extract_first()
             item['goodurl'] = good_url
             i['goodname'] = good.xpath('./em/text()').extract_first().replace('\n', '').strip()
             # print(i, '********************************************')

@@ -6,6 +6,7 @@
 # See: http://doc.scrapy.org/en/latest/topics/item-pipeline.html
 from pymongo import MongoClient
 
+
 class JdspiderPipeline(object):
     def process_item(self, item, spider):
         # item = str(item)

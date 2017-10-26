@@ -26,7 +26,7 @@ USER_AGENT_LIST = [
 "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0;) ",
 ]
 
-
+LOG_FILE = 'log.txt'
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'JDspider (+http://www.yourdomain.com)'
 

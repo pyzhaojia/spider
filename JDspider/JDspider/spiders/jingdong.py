@@ -33,8 +33,6 @@ class JingdongSpider(scrapy.Spider):
         item['goodslist'] =[]
         # 获取商品列表
         good_list = response.xpath('//*[@id="plist"]/ul/li/div/div[3]/a')
-
-
         id_list = []
         for good in good_list:
             i = {}
@@ -45,7 +43,6 @@ class JingdongSpider(scrapy.Spider):
             id = re.findall(r'\d+', good_url)[0]
             good_id = 'J_' + str(id)
             id_list.append(good_id)
-
             yield scrapy.Request(url=good_url, callback=self.parse_detail, meta={'item': item, 'id_list': id_list, 'i': i})
 
     def parse_price(self, response):
@@ -54,8 +51,7 @@ class JingdongSpider(scrapy.Spider):
         # 提取价格并添加到item中
         for i, k in zip(item['goodslist'], result):
             i['goodprice'] = k['p']
-
-        print(item)
+        # print(item)
         yield item
 
     def parse_detail(self, response):
